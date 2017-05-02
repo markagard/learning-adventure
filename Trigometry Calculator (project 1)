@@ -1,0 +1,126 @@
+import time
+import math
+p = math.pi
+print("Welcome to the Basic Trigonometry Calculator by Mark Agard. This was created on April 27th of 2017")
+time.sleep(2)
+print("This program is very basic, and can only do the following things;\nDo basic trig \nDo inverse trig \nConvert Radians/Degrees")
+time.sleep(2)
+done_stat = "no"
+while done_stat == "no": #allows repeated requests
+    operation = input("Please select one of those options, using the names;\nbasic trig\ninverse trig\nconversion\n")
+    if operation == "basic trig": 
+        print("You've selected basic trig")
+        time.sleep(0.8)
+        op_trig = input("please indicate if you need sin, cos, tan, csc, sec, or cot\n")
+        if op_trig == "sin": 
+            x = input("what is the angle for sin?\n")
+            x = int(x)
+            x = math.radians(x)#needed because trig functions use radians, but degrees more common in my homework
+            sinx = math.sin(x)
+            sinx = round(sinx, 3)
+            print("The answer is " + str(sinx))
+        if op_trig == "csc":
+            x = input("what is the angle for csc?\n")
+            x = int(x)
+            x = math.radians(x)
+            sinx = math.sin(x)
+            sinx = round(sinx, 3)
+            cscx = (1/sinx)
+            print("The answer is " + str(cscx))
+        if op_trig == "cos":
+            x = input("what is the angle for cos?\n")
+            x = int(x)
+            x = math.radians(x)
+            cosx = math.cos(x)
+            cosx = round(cosx, 3)
+            print("The answer is " + str(cosx))
+        if op_trig == "sec":
+            x = input("what is the angle for sec?\n")
+            x = int(x)
+            x = math.radians(x)
+            cosx = math.cos(x)
+            cosx = round(cosx, 3)
+            secx = (1/cosx)
+            print("The answer is " + str(secx))
+        if op_trig == "tan":
+            x = input("what is the angle for tan?\n")
+            x = int(x)
+            x = math.radians(x)
+            tanx = math.tan(x)
+            tanx = round(tanx, 3)
+            print("The answer is " + str(tanx, 3))
+        if op_trig == "cot":
+            x = input("what is the angle for cot?\n")
+            x = int(x)
+            x = math.radians(x)
+            tanx = math.tan(x)
+            tanx = round(tanx, 3)
+            cotx = (1/tanx)
+            print("The answer is " + str(cotx, 3))
+    if operation == "basic trig": 
+        print("You've selected inverse trig")
+        time.sleep(0.8)
+        op_trig = input("please indicate if you need arcsin, arccos, arctan, arccsc, arcsec, or arccot\n")
+        if op_trig == "arcsin": 
+            x = input("what is the angle for arcsin?\n")
+            x = int(x)
+            x = math.radians(x)
+            arcsinx = math.asin(x)
+            arcsinx = round(arcsinx, 3)
+            print("The answer is " + str(arcsinx))
+        if op_trig == "arccsc":
+            x = input("what is the angle for arccsc?\n")
+            x = int(x)
+            x = math.radians(x)
+            arcsinx = math.asin(x)
+            arcsinx = round(arcsinx, 3)
+            arccscx = (1/arcsinx)
+            print("The answer is " + str(cscx))
+        if op_trig == "arccos":
+            x = input("what is the angle for arccos?\n")
+            x = int(x)
+            x = math.radians(x)
+            arccosx = math.acos(x)
+            arccosx = round(arccosx, 3)
+            print("The answer is " + str(cosx))
+        if op_trig == "arcsec":
+            x = input("what is the angle for sec?\n")
+            x = int(x)
+            x = math.radians(x)
+            arccosx = math.acos(x)
+            arccosx = round(arccosx, 3)
+            arcsecx = (1/arccosx)
+            print("The answer is " + str(arcsecx))
+        if op_trig == "arctan":
+            x = input("what is the angle for arctan?\n")
+            x = int(x)
+            x = math.radians(x)
+            arctanx = math.atan(x)
+            arctanx = round(arctanx, 3)
+            print("The answer is " + str(tanx, 3))
+        if op_trig == "arccot":
+            x = input("what is the angle for cot?\n")
+            x = int(x)
+            x = math.radians(x)
+            arctanx = math.atan(x)
+            arctanx = round(arctanx, 3)
+            arccotx = (1/arctanx)
+            print("The answer is " + str(arccotx, 3))
+    if operation == "conversion":
+        print("You've selected conversion")
+        time.sleep(0.8)
+        op_trig = input("please indicate if you need degrees or radians\n")
+        if op_trig == "degrees": #Can only accept integers 
+            x = input("What is the number of radians?\n")
+            x = float(x)
+            x = p*x
+            x = math.degrees(x)
+            print("The answer is " + str(x) + " degrees")
+        if op_trig == "radians": 
+            x = input("What is the number of degrees?\n")
+            x = float(x)
+            x = math.radians(x)
+            print("The answer is " + str(x) + " radians")
+    done_stat = input("Is that all?\n")#anything other than 'no' will end program, while 'no' starts the prompt again 
+print("Okay. Closing program")
+    
